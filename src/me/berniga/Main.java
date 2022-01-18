@@ -11,7 +11,9 @@ public class Main {
 	    CdHolder c=new CdHolder(10);
         try{
             //BufferedReader in=new BufferedReader(new FileReader("in.txt"));
-            Scanner in=new Scanner(new File("in.txt"));
+            Scanner keyboard=new Scanner(System.in);
+            System.out.println("Type the name of the input file: ");
+            Scanner in=new Scanner(new File(keyboard.nextLine()+".txt"));
             while(in.hasNextLine()){
                 String[] data=in.nextLine().split(";");
                 try{
